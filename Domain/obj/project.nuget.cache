@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "HHXiiJhbR8okXDcpTDW5nUifAMCGbtUSlO1xgsksovhsbjsP6fsMtnbcO/qEgbpZPJmBumfVy5csuKQqPoj3HA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Marija\\Downloads\\SecondHandEShop.Api-c2f3522f0047c68c5edfc6c20d3ae9fdaf4efd6d\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Marija\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\Marija\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Marija\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\Marija\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.32.0\\microsoft.identitymodel.abstractions.6.32.0.nupkg.sha512",
+    "C:\\Users\\Marija\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.32.0\\microsoft.identitymodel.jsonwebtokens.6.32.0.nupkg.sha512",
+    "C:\\Users\\Marija\\.nuget\\packages\\microsoft.identitymodel.logging\\6.32.0\\microsoft.identitymodel.logging.6.32.0.nupkg.sha512",
+    "C:\\Users\\Marija\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.32.0\\microsoft.identitymodel.tokens.6.32.0.nupkg.sha512",
+    "C:\\Users\\Marija\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Marija\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\Marija\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.32.0\\system.identitymodel.tokens.jwt.6.32.0.nupkg.sha512",
+    "C:\\Users\\Marija\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512",
+    "C:\\Users\\Marija\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\Marija\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "C:\\Users\\Marija\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
+    "C:\\Users\\Marija\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
+    "C:\\Users\\Marija\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
+    "C:\\Users\\Marija\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+  ],
+  "logs": []
+}
