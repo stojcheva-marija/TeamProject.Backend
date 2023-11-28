@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Domain.DTO;
+using Domain.CustomExceptions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.Interface;
 using System;
@@ -31,6 +33,25 @@ namespace SecondHandEShop.Api.Controllers
         public IActionResult GetProfile(string username)
         {
             return Ok(_userService.GetProfile(username));
+        }
+
+        [HttpPut]
+        public IActionResult EditMyProfile([FromBody] ProfileEditRequestDTO request)
+        {
+            UserDTO userDTO = request.UserDTO;
+            string password = request.Password;
+            try
+            {
+                return Ok(_userProfileService.EditMyUserProfile(userDTO, password));
+            }
+            catch (InvalidPasswordException ex)
+            {
+                return BadRequest(new { error = "InvalidPassword", message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Failed to update user profile.");
+            }
         }
 
     }
