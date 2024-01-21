@@ -92,5 +92,50 @@ namespace Service.Implementation
                 throw new Exception("Failed to update user profile.", ex);
             }
         }
+
+        public UserDTO ChangePassword(string oldPassword, string newPassword, string repeatNewPassword)
+        {
+            var currentUser = _userRepository.GetByUsername(_user.Username);
+
+            var passwordVerificationResult = _passwordHasher.VerifyHashedPassword(currentUser.Password, oldPassword);
+
+            if (passwordVerificationResult != PasswordVerificationResult.Success)
+            {
+                throw new InvalidPasswordException("The current password you have entered is incorrect.");
+            }
+
+            if (newPassword != repeatNewPassword)
+            {
+                throw new PasswordMismatchException("New passwords do not match.");
+            }
+
+            currentUser.Password = _passwordHasher.HashPassword(newPassword);
+
+            try
+            {
+                _userRepository.Update(currentUser);
+
+                return new UserDTO
+                {
+                    Name = currentUser.Name,
+                    Surname = currentUser.Surname,
+                    Email = currentUser.Email,
+                    Phone = currentUser.Phone,
+                    Address = currentUser.Address,
+                    Username = currentUser.Username,
+                    City = currentUser.City,
+                    PostalCode = currentUser.PostalCode,
+                    Rating = currentUser.UserRating,
+                    RatingCount = currentUser.UserRatingCount,
+                    Comments = _commentRepository.GetByReceiver(currentUser.Id)
+                };
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Failed to update password.", ex);
+            }
+        }
+
+
     }
 }

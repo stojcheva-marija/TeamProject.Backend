@@ -54,5 +54,27 @@ namespace SecondHandEShop.Api.Controllers
             }
         }
 
+        [HttpPost]
+        public IActionResult ChangePassword([FromBody] ChangePasswordDTO changePasswordDTO)
+        {
+            try
+            {
+                _userProfileService.ChangePassword(changePasswordDTO.OldPassword, changePasswordDTO.NewPassword, changePasswordDTO.RepeatNewPassword);
+
+                return Ok(new { Message = "Password changed successfully." });
+            }
+            catch (InvalidPasswordException ex)
+            {
+                return BadRequest(new { Message = "Invalid old password." });
+            }
+            catch (PasswordMismatchException ex)
+            {
+                return BadRequest(new { Message = "New passwords do not match." });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = "Failed to change password.", Error = ex.Message });
+            }
+        }
     }
 }

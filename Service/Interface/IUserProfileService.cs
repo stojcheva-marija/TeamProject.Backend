@@ -9,5 +9,6 @@ namespace Service.Interface
     {
         UserDTO GetMyProfile();
         UserDTO EditMyUserProfile(UserDTO updatedUserDTO, string password);
+        UserDTO ChangePassword(string oldPassword, string newPassword, string repeatNewPassword);
     }
 }
