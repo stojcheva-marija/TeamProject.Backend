@@ -15,5 +15,6 @@ namespace Service.Interface
         void DeleteProduct(ProductDTO productDTO);
         bool AddToShoppingCart(Product product, string email);
         bool AddToFavourites(Product product, string email);
+        bool AddToRented(Product product, string email);
     }
 }

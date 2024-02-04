@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Domain.DTO
 {
-    public class AddProductToShoppingCartOrFavouritesDTO
+    public class AddProductToDTO
     {   public Product Product { get; set; }
         public string Email { get; set; }
     }

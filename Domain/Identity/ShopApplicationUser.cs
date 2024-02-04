@@ -15,6 +15,7 @@ namespace Domain.Identity
         public string PostalCode { get; set; }
         public virtual ShoppingCart UserShoppingCart { get; set; }
         public virtual Favourites UserFavourites { get; set; }
+        public virtual Rented UserRented { get; set; }
         public int UserRatingCount { get; set; }
         public double UserRating { get; set; }
         public int UserRatingTotal { get; set; }

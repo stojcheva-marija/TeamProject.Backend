@@ -91,15 +91,21 @@ namespace SecondHandEShop.Api.Controllers
         }
 
         [HttpPost("AddToCart")]
-        public IActionResult AddToCart(AddProductToShoppingCartOrFavouritesDTO item)
+        public IActionResult AddToCart(AddProductToDTO item)
         {
             return Ok(_productService.AddToShoppingCart(item.Product, item.Email));
         }
 
         [HttpPost("AddToFavourites")]
-        public IActionResult AddToFavourites(AddProductToShoppingCartOrFavouritesDTO item)
+        public IActionResult AddToFavourites(AddProductToDTO item)
         {
             return Ok(_productService.AddToFavourites(item.Product, item.Email));
+        }
+
+        [HttpPost("AddToRented")]
+        public IActionResult AddToRented(AddProductToDTO item)
+        {
+            return Ok(_productService.AddToRented(item.Product, item.Email));
         }
     }
 }

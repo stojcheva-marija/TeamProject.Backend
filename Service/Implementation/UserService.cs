@@ -69,6 +69,12 @@ namespace Service.Implementation
                 UserId = user.Id
             };
 
+            var userRented = new Rented
+            {
+                UserId = user.Id
+            };
+
+            user.UserRented = userRented;
             user.UserFavourites = userFavouries;
             user.UserRatingCount = 0;
             user.UserRating = 0;
