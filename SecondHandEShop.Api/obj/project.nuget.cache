@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fKlkQmcq/nMqQut3SqG7kC3E1dhyJw7d+mZ+hUdrs0x4KCgky6sO1T6K8vWdgq2fXWSjkpUnheJ7GS4fxvIDbA==",
+  "dgSpecHash": "ErQIl0GdQWkcPMPZ+bCWLxrzYCjhTsvutauh1+yj0ShJTRIVYG7yl4kP95dYtAlyINbh3OamLEGCqDod6L4gIQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\SecondHandEShop.Api\\SecondHandEShop.Api.csproj",
+  "projectFilePath": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\SecondHandEShop.Api\\SecondHandEShop.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Depka\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Depka\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.4\\microsoft.aspnet.identity.core.2.2.4.nupkg.sha512",

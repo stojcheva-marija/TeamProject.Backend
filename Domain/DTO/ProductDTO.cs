@@ -28,7 +28,7 @@ namespace Domain.DTO
         public double UserRating { get; set; }
         public string ProductImage { get; set; }
 
-        public string ProductRent { get; set; }
+        public bool ProductRent { get; set; }
         public int ProductDaysRent { get; set; }    
 
         public static explicit operator ProductDTO(Product p) => new ProductDTO
@@ -51,9 +51,9 @@ namespace Domain.DTO
             ProductMaterial = p.ProductMaterial,
             ProductSex = p.ProductSex.ToString(),
             UserRating = p.ShopApplicationUser.UserRating,
-            ProductImage = p.ProductImage,
-            ProductRent = p.ProductRent.ToString(),
+            ProductRent = p.ProductRent,
             ProductDaysRent = p.ProductDaysRent,
+            ProductImage = p.ProductImage,
     };
     }
 }

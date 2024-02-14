@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Service\\Service.csproj": {}
+    "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Service\\Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Domain\\Domain.csproj": {
+    "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Depka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Depka\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Repository\\Repository.csproj": {
+    "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Repository\\Repository.csproj",
+        "projectPath": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\Depka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Repository\\obj\\",
+        "outputPath": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Depka\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -93,8 +93,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Domain\\Domain.csproj"
+              "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -144,14 +144,14 @@
         }
       }
     },
-    "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Service\\Service.csproj": {
+    "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Service\\Service.csproj",
+        "projectPath": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\Depka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Service\\obj\\",
+        "outputPath": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Depka\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -168,11 +168,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Domain\\Domain.csproj"
+              "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Repository\\Repository.csproj"
+              "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Repository\\Repository.csproj"
               }
             }
           }

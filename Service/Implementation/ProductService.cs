@@ -11,6 +11,7 @@ using Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Core.Mapping;
+using System.Globalization;
 using System.Linq;
 
 
@@ -38,9 +39,12 @@ namespace Service.Implementation
 
         public ProductDTO CreateProduct(Product product)
         {
+            _productRepository.Insert(product);
             product.ShopApplicationUser = _user;
             product.ProductAvailablity = true;
-            _productRepository.Insert(product);
+            
+            _productRepository.Update(product);
+
             return (ProductDTO) product;
         }
 
@@ -69,15 +73,24 @@ namespace Service.Implementation
             product.ProductSex = (Sex)Enum.Parse(typeof(Sex), productDTO.ProductSex);
             product.ProductAvailablity = productDTO.ProductAvailablity;
 
+            //so gospod napred
+            product.ProductDaysRent = productDTO.ProductDaysRent;
+            product.ProductRent = productDTO.ProductRent;
+
             _productRepository.Update(product);
 
             return (ProductDTO)product;
         }
 
-        public List<ProductDTO> GetProducts(string type, string sex, string subcategory, string searchTerm, string colorFilter, string sizeFilter, string conditionFilter, string sortByPrice, string sortByUserRating, string shoeNumberRange)
+        public List<ProductDTO> GetProducts(string rent,string type, string sex, string subcategory, string searchTerm, string colorFilter, string sizeFilter, string conditionFilter, string sortByPrice, string sortByUserRating, string shoeNumberRange)
         {
             var products = _productRepository.GetAllAvaliableProducts();
 
+            //Filter by renting
+            if(!string.IsNullOrEmpty(rent))
+            {
+                products = products.Where(p => p.ProductRent == Boolean.Parse(rent)).ToList();
+            }
             //Filter by type
             if (!string.IsNullOrEmpty(type) && Enum.TryParse<ProductType>(type, out var productType))
             {
@@ -235,7 +248,7 @@ namespace Service.Implementation
             return false;
         }
 
-        public bool AddToRented(Product product, string email)
+        public bool AddToRented(Product product, string email, DateTime EndDate)
         {
             var user = _userRepository.GetByEmail(email);
 
@@ -253,7 +266,10 @@ namespace Service.Implementation
                         Rented = userRented,
                         Product = p,
                         RentedId = userRented.Id,
-                        ProductId = p.Id
+                        ProductId = p.Id,
+                        StartDate = DateTime.Now,
+                        EndDate = EndDate
+
                     };
 
                     _productInRentedRepository.Insert(productInRented);

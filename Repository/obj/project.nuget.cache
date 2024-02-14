@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LffzfC9K8BR4tu2NqNDexk4uZhC+zVWMYvy+jz8AQLEUhpOClir2Axa+kVxbdUhMwaHeiUZJKY/P0sif3owBNg==",
+  "dgSpecHash": "SfN5e4AE0/nhiDowtuSpObUgbsNYB7UqZ9ODB6iBaJoBlQSYqdUNJwfkVnWfPBpt3Qp/i2JJfmv5zye2odf1BQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Repository\\Repository.csproj",
+  "projectFilePath": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Depka\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\Depka\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

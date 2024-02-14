@@ -54,10 +54,10 @@ namespace SecondHandEShop.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetProducts(string type = "", string sex = "", string subcategory="", string searchTerm = "", string colorFilter = "", string sizeFilter = "", string conditionFilter = "", string sortByPrice = "", string sortByUserRating = "", string shoeNumberRange="")
+        public IActionResult GetProducts(string rent="",string type = "", string sex = "", string subcategory="", string searchTerm = "", string colorFilter = "", string sizeFilter = "", string conditionFilter = "", string sortByPrice = "", string sortByUserRating = "", string shoeNumberRange="")
         {
             
-            return Ok(_productService.GetProducts(type, sex, subcategory, searchTerm, colorFilter, sizeFilter, conditionFilter, sortByPrice, sortByUserRating, shoeNumberRange));
+            return Ok(_productService.GetProducts(rent,type, sex, subcategory, searchTerm, colorFilter, sizeFilter, conditionFilter, sortByPrice, sortByUserRating, shoeNumberRange));
         }
 
         [HttpGet("myProducts")]
@@ -103,9 +103,9 @@ namespace SecondHandEShop.Api.Controllers
         }
 
         [HttpPost("AddToRented")]
-        public IActionResult AddToRented(AddProductToDTO item)
+        public IActionResult AddToRented(AddProductToDTO item, DateTime EndDate)
         {
-            return Ok(_productService.AddToRented(item.Product, item.Email));
+            return Ok(_productService.AddToRented(item.Product, item.Email,EndDate));
         }
     }
 }

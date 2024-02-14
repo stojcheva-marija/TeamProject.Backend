@@ -35,7 +35,6 @@ namespace Repository
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<ProductInShoppingCart>()
                 .HasKey(psc => new { psc.ProductId, psc.ShoppingCartId });
