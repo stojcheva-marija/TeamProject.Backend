@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Service.Implementation;
 using Service.Interface;
 
 namespace SecondHandEShop.Api.Controllers
@@ -15,10 +16,18 @@ namespace SecondHandEShop.Api.Controllers
             this._rentedService = rentedService;
         }
 
+        //displays only when the product has been ordered and its availability is set to false
         [HttpGet]
         public IActionResult GetRented(string email)
         {
             return Ok(_rentedService.getRentedInfo(email));
+        }
+
+        [HttpDelete]
+        public IActionResult DeleteFromFavourites(string email, int product)
+        {
+
+            return Ok(_rentedService.deleteProductFromRented(email, product));
         }
     }
 }

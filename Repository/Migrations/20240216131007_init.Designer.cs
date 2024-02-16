@@ -10,7 +10,7 @@ using Repository;
 namespace Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240214123707_init")]
+    [Migration("20240216131007_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -129,9 +129,6 @@ namespace Repository.Migrations
 
                     b.Property<string>("ProductColor")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ProductDaysRent")
-                        .HasColumnType("int");
 
                     b.Property<string>("ProductDescription")
                         .HasColumnType("nvarchar(max)");

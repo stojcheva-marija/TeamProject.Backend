@@ -128,9 +128,6 @@ namespace Repository.Migrations
                     b.Property<string>("ProductColor")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ProductDaysRent")
-                        .HasColumnType("int");
-
                     b.Property<string>("ProductDescription")
                         .HasColumnType("nvarchar(max)");
 

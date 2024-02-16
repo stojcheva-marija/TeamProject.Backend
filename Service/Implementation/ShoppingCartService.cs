@@ -17,18 +17,20 @@ namespace Service.Implementation
 
         public readonly IRepository<ShoppingCart> _shoppingCartRepository;
         public readonly IRepository<ProductInOrder> _productInOrderRepository;
+        public readonly IRepository<ProductInRented> _productInRented;
         public readonly IRepository<Order> _orderRepository;
         public readonly IUserRepository _userRepository;
         public readonly IRepository<Product> _productRepository;
 
-        public ShoppingCartService(IRepository<ShoppingCart> shoppingCartRepository, IRepository<ProductInOrder> productInOrderRepository, IRepository<Order> orderRepository, IUserRepository userRepository, IRepository<Product> productRepository)
+
+        public ShoppingCartService(IRepository<ShoppingCart> shoppingCartRepository, IRepository<ProductInOrder> productInOrderRepository, IRepository<Order> orderRepository, IRepository<ProductInRented> productInRented, IUserRepository userRepository, IRepository<Product> productRepository)
         {
             this._shoppingCartRepository = shoppingCartRepository;
             this._productInOrderRepository = productInOrderRepository;
             this._orderRepository = orderRepository;
             this._userRepository = userRepository;
             this._productRepository = productRepository;
-
+            this._productInRented = productInRented;
         }
         public ShoppingCartDTO getShoppingCartInfo(string email)
         {
@@ -88,6 +90,13 @@ namespace Service.Implementation
                 FormattedDate = DateTime.Now.ToString("yyyy-MM-dd"),
                 FormattedTime = DateTime.Now.ToString("HH:mm:ss")
             };
+
+            foreach (ProductInRented p in loggedInUser.UserRented.ProductsInRented)
+            {
+                //smeni im gi na order 
+                p.StartDate = DateTime.Now;
+                _productInRented.Update(p);
+            }
 
             List<ProductInShoppingCart> productsInShoppingCart = userCard.ProductsInShoppingCart;
 

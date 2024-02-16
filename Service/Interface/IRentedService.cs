@@ -8,5 +8,7 @@ namespace Service.Interface
     public interface IRentedService
     {
         List<ProductInRented> getRentedInfo(string userId);
+        public bool deleteProductFromRented(string email, int productId);
     }
+
 }

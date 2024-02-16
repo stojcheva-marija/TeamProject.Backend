@@ -73,8 +73,6 @@ namespace Service.Implementation
             product.ProductSex = (Sex)Enum.Parse(typeof(Sex), productDTO.ProductSex);
             product.ProductAvailablity = productDTO.ProductAvailablity;
 
-            //so gospod napred
-            product.ProductDaysRent = productDTO.ProductDaysRent;
             product.ProductRent = productDTO.ProductRent;
 
             _productRepository.Update(product);
@@ -190,11 +188,18 @@ namespace Service.Implementation
                
         }
 
-        public bool AddToShoppingCart(Product product, string email)
+        public bool AddToShoppingCart(Product product, string email, DateTime endDate)
         {
             var user = _userRepository.GetByEmail(email);
 
             var userShoppingCart = user.UserShoppingCart;
+            
+            if (endDate != null)
+            {
+                //znachi deka saka da go renta chim ima datum 
+                //za sega startdate ke bide now ama ke se smeni na order 
+                AddToRented(product, user.Email, endDate, DateTime.Now);
+            }
 
             if (userShoppingCart != null && product != null)
             {
@@ -247,8 +252,9 @@ namespace Service.Implementation
 
             return false;
         }
-
-        public bool AddToRented(Product product, string email, DateTime EndDate)
+        //start date treba da se stai order now -- update ke se naprai posle orderot 
+        //end date treba da se bira pred toa koga se prai addToRented mozhe da bide kako addToShoppingCart ama da bide posebna funkcija 
+        public bool AddToRented(Product product, string email, DateTime EndDate, DateTime StartDate)
         {
             var user = _userRepository.GetByEmail(email);
 
@@ -267,7 +273,8 @@ namespace Service.Implementation
                         Product = p,
                         RentedId = userRented.Id,
                         ProductId = p.Id,
-                        StartDate = DateTime.Now,
+                        //tuka treba start date da e date na order 
+                        StartDate = StartDate,
                         EndDate = EndDate
 
                     };

@@ -33,7 +33,7 @@ namespace Domain.Domain_models
         public bool ProductRent { get; set; } = false;
 
         //max days to rent -- to be checked when renting out 
-        public int ProductDaysRent { get; set; } = 0;
+        //public int ProductDaysRent { get; set; } = 0;
         public string ProductImage { get; set; }
         public Sex ProductSex { get; set; }
         [ForeignKey("ShopApplicationUserId")]

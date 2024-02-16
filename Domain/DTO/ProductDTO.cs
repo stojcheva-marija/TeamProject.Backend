@@ -52,7 +52,6 @@ namespace Domain.DTO
             ProductSex = p.ProductSex.ToString(),
             UserRating = p.ShopApplicationUser.UserRating,
             ProductRent = p.ProductRent,
-            ProductDaysRent = p.ProductDaysRent,
             ProductImage = p.ProductImage,
     };
     }

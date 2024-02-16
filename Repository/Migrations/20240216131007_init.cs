@@ -168,7 +168,6 @@ namespace Repository.Migrations
                     ProductPrice = table.Column<float>(nullable: false),
                     ProductAvailablity = table.Column<bool>(nullable: false),
                     ProductRent = table.Column<bool>(nullable: false),
-                    ProductDaysRent = table.Column<int>(nullable: false),
                     ProductImage = table.Column<string>(nullable: true),
                     ProductSex = table.Column<int>(nullable: false),
                     ShopApplicationUserId = table.Column<int>(nullable: true)

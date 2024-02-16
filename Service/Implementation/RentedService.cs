@@ -1,4 +1,5 @@
 ﻿using Domain.Domain_models;
+using Domain.DTO;
 using Repository.Implementation;
 using Repository.Interface;
 using Service.Interface;
@@ -32,6 +33,24 @@ namespace Service.Implementation
             var productsList = userRented.ProductsInRented.Where(p => p.Product.ProductAvailablity == false && p.Product.ProductRent == true && p.EndDate<CurrentDate).ToList();
 
             return productsList;
+        }
+
+        //returned -- toj shto stava items ZA rentanje 
+        public bool deleteProductFromRented(string email, int productId)
+        {
+            if (!string.IsNullOrEmpty(email) && productId != null)
+            {
+                var loggInUser = _userRepository.GetByEmail(email);
+                var userRented = loggInUser.UserRented;
+                var itemToDelete = userRented.ProductsInRented.Where(z => z.ProductId.Equals(productId)).FirstOrDefault();
+                userRented.ProductsInRented.Remove(itemToDelete);
+                _rentedRepository.Update(userRented);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
     }
