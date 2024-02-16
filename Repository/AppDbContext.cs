@@ -19,10 +19,12 @@ namespace Repository
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
         public DbSet<ProductInShoppingCart> ProductsInShoppingCarts { get; set; }
         public DbSet<Favourites> Favourites { get; set; }
+        public DbSet<Rented> Rented {  get; set; }
         public DbSet<ProductInFavourites> ProductsInFavourites { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<ProductInOrder> ProductsInOrders { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<ProductInRented> ProductsInRented { get; set; }
 
         protected override void OnConfiguring( DbContextOptionsBuilder optionsBuilder)
         {
@@ -33,10 +35,12 @@ namespace Repository
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<ProductInShoppingCart>()
                 .HasKey(psc => new { psc.ProductId, psc.ShoppingCartId });
+            
+            modelBuilder.Entity<ProductInRented>()
+               .HasKey(psr => new { psr.ProductId, psr.RentedId });
 
             modelBuilder.Entity<ProductInFavourites>()
                 .HasKey(pf => new { pf.ProductId, pf.FavouritesId });

@@ -48,3 +48,13 @@ C:\Users\Marija\Downloads\SecondHandEShop.Api-c2f3522f0047c68c5edfc6c20d3ae9fdaf
 C:\Users\Marija\Downloads\SecondHandEShop.Api-c2f3522f0047c68c5edfc6c20d3ae9fdaf4efd6d\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
 C:\Users\Marija\Downloads\SecondHandEShop.Api-c2f3522f0047c68c5edfc6c20d3ae9fdaf4efd6d\Domain\obj\Debug\netcoreapp3.1\Domain.dll
 C:\Users\Marija\Downloads\SecondHandEShop.Api-c2f3522f0047c68c5edfc6c20d3ae9fdaf4efd6d\Domain\obj\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\Depka\Source\Repos\TeamProject.Backend\Domain\bin\Debug\netcoreapp3.1\Domain.deps.json
+C:\Users\Depka\Source\Repos\TeamProject.Backend\Domain\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\Depka\Source\Repos\TeamProject.Backend\Domain\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\Depka\Source\Repos\TeamProject.Backend\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.AssemblyReference.cache
+C:\Users\Depka\Source\Repos\TeamProject.Backend\Domain\obj\Debug\netcoreapp3.1\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Depka\Source\Repos\TeamProject.Backend\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfoInputs.cache
+C:\Users\Depka\Source\Repos\TeamProject.Backend\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfo.cs
+C:\Users\Depka\Source\Repos\TeamProject.Backend\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
+C:\Users\Depka\Source\Repos\TeamProject.Backend\Domain\obj\Debug\netcoreapp3.1\Domain.dll
+C:\Users\Depka\Source\Repos\TeamProject.Backend\Domain\obj\Debug\netcoreapp3.1\Domain.pdb

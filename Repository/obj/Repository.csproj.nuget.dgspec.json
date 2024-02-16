@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marija\\Downloads\\SecondHandEShop.Api-c2f3522f0047c68c5edfc6c20d3ae9fdaf4efd6d\\Repository\\Repository.csproj": {}
+    "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Repository\\Repository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marija\\Downloads\\SecondHandEShop.Api-c2f3522f0047c68c5edfc6c20d3ae9fdaf4efd6d\\Domain\\Domain.csproj": {
+    "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marija\\Downloads\\SecondHandEShop.Api-c2f3522f0047c68c5edfc6c20d3ae9fdaf4efd6d\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Marija\\Downloads\\SecondHandEShop.Api-c2f3522f0047c68c5edfc6c20d3ae9fdaf4efd6d\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Marija\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marija\\Downloads\\SecondHandEShop.Api-c2f3522f0047c68c5edfc6c20d3ae9fdaf4efd6d\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Depka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Marija\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Depka\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -64,21 +65,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Marija\\Downloads\\SecondHandEShop.Api-c2f3522f0047c68c5edfc6c20d3ae9fdaf4efd6d\\Repository\\Repository.csproj": {
+    "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marija\\Downloads\\SecondHandEShop.Api-c2f3522f0047c68c5edfc6c20d3ae9fdaf4efd6d\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\Marija\\Downloads\\SecondHandEShop.Api-c2f3522f0047c68c5edfc6c20d3ae9fdaf4efd6d\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\Marija\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marija\\Downloads\\SecondHandEShop.Api-c2f3522f0047c68c5edfc6c20d3ae9fdaf4efd6d\\Repository\\obj\\",
+        "projectPath": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\Depka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Marija\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Depka\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -92,8 +93,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Marija\\Downloads\\SecondHandEShop.Api-c2f3522f0047c68c5edfc6c20d3ae9fdaf4efd6d\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Marija\\Downloads\\SecondHandEShop.Api-c2f3522f0047c68c5edfc6c20d3ae9fdaf4efd6d\\Domain\\Domain.csproj"
+              "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Depka\\source\\repos\\TeamProject.Backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -129,7 +130,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -138,7 +140,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

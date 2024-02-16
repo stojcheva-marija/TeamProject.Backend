@@ -54,27 +54,33 @@ namespace Service.Implementation
             {
                 throw new EmailAlreadyExistsException("User with this Email or Username already exists!");
             }
-
+            _userRepository.Insert(user);
             user.Password = _passwordHasher.HashPassword(user.Password);
 
             var userShoppingCart = new ShoppingCart
             {
                 UserId = user.Id
             };
-
-            user.UserShoppingCart = userShoppingCart;
+ 
 
             var userFavouries = new Favourites
             {
                 UserId = user.Id
             };
 
+            var userRented = new Rented
+            {
+                UserId = user.Id
+            };
+
+            user.UserShoppingCart = userShoppingCart;
+            user.UserRented = userRented;
             user.UserFavourites = userFavouries;
             user.UserRatingCount = 0;
             user.UserRating = 0;
             user.UserRatingTotal = 0;
 
-            _userRepository.Insert(user);
+            _userRepository.Update(user);
 
             return new AuthenticatedUserDTO
             {

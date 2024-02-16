@@ -1,14 +1,17 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Domain",
+    "\\Domain\\obj",
     "\\Repository",
-    "\\Repository\\bin",
     "\\Repository\\Implementation",
     "\\Repository\\Interface",
-    "\\Repository\\obj",
+    "\\SecondHandEShop.Api",
+    "\\SecondHandEShop.Api\\Controllers",
     "\\Service",
-    "\\Service\\Implementation"
+    "\\Service\\Implementation",
+    "\\Service\\Interface"
   ],
-  "SelectedNode": "\\Service\\Implementation\\UserProfileService.cs",
+  "SelectedNode": "\\SecondHandEShop.Api\\Controllers\\ProductsController.cs",
   "PreviewInSolutionExplorer": false
 }

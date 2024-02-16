@@ -11,6 +11,7 @@ using Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Core.Mapping;
+using System.Globalization;
 using System.Linq;
 
 
@@ -23,22 +24,27 @@ namespace Service.Implementation
         public readonly IRepository<ProductInShoppingCart> _productInShoppingCartRepository;
         public readonly IRepository<ProductInFavourites> _productInFavouritesRepository;
         private readonly ShopApplicationUser _user;
-    
-        public ProductService (IHttpContextAccessor httpContextAccessor, IUserRepository userRepository, IProductRepository productRepository, IRepository<ProductInShoppingCart> productInShoppingCartRepository, IRepository<ProductInFavourites> productInFavouritesRepository)
+        private readonly IRepository<ProductInRented> _productInRentedRepository;
+
+        public ProductService (IHttpContextAccessor httpContextAccessor, IUserRepository userRepository, IProductRepository productRepository, IRepository<ProductInShoppingCart> productInShoppingCartRepository, IRepository<ProductInFavourites> productInFavouritesRepository, IRepository<ProductInRented> productInRentedRepository)
         {
             this._userRepository = userRepository;
             this._productRepository = productRepository;
             this._productInShoppingCartRepository = productInShoppingCartRepository;
             this._productInFavouritesRepository = productInFavouritesRepository;
             this._user = _userRepository.GetByEmail(httpContextAccessor.HttpContext.User.Identity.Name);
+            this._productInRentedRepository = productInRentedRepository;
             //httpContextAccessor.HttpContext.User.Identity.Name --> The name we have inside the JWT Token
         }
 
         public ProductDTO CreateProduct(Product product)
         {
+            _productRepository.Insert(product);
             product.ShopApplicationUser = _user;
             product.ProductAvailablity = true;
-            _productRepository.Insert(product);
+            
+            _productRepository.Update(product);
+
             return (ProductDTO) product;
         }
 
@@ -67,15 +73,24 @@ namespace Service.Implementation
             product.ProductSex = (Sex)Enum.Parse(typeof(Sex), productDTO.ProductSex);
             product.ProductAvailablity = productDTO.ProductAvailablity;
 
+            //so gospod napred
+            product.ProductDaysRent = productDTO.ProductDaysRent;
+            product.ProductRent = productDTO.ProductRent;
+
             _productRepository.Update(product);
 
             return (ProductDTO)product;
         }
 
-        public List<ProductDTO> GetProducts(string type, string sex, string subcategory, string searchTerm, string colorFilter, string sizeFilter, string conditionFilter, string sortByPrice, string sortByUserRating, string shoeNumberRange)
+        public List<ProductDTO> GetProducts(string rent,string type, string sex, string subcategory, string searchTerm, string colorFilter, string sizeFilter, string conditionFilter, string sortByPrice, string sortByUserRating, string shoeNumberRange)
         {
             var products = _productRepository.GetAllAvaliableProducts();
 
+            //Filter by renting
+            if(!string.IsNullOrEmpty(rent))
+            {
+                products = products.Where(p => p.ProductRent == Boolean.Parse(rent)).ToList();
+            }
             //Filter by type
             if (!string.IsNullOrEmpty(type) && Enum.TryParse<ProductType>(type, out var productType))
             {
@@ -233,5 +248,36 @@ namespace Service.Implementation
             return false;
         }
 
+        public bool AddToRented(Product product, string email, DateTime EndDate)
+        {
+            var user = _userRepository.GetByEmail(email);
+
+            var userRented = user.UserRented;
+
+            if (userRented != null && product != null)
+            {
+                var isAlreadyAdded = userRented.ProductsInRented.FirstOrDefault(p => p.ProductId == product.Id);
+
+                if (isAlreadyAdded == null)
+                {
+                    var p = _productRepository.GetById(product.Id);
+                    var productInRented = new ProductInRented
+                    {
+                        Rented = userRented,
+                        Product = p,
+                        RentedId = userRented.Id,
+                        ProductId = p.Id,
+                        StartDate = DateTime.Now,
+                        EndDate = EndDate
+
+                    };
+
+                    _productInRentedRepository.Insert(productInRented);
+                }
+                return true;
+            }
+
+            return false;
+        }
     }
 }
