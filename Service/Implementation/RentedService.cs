@@ -31,7 +31,6 @@ namespace Service.Implementation
             //TO DO: da se naprai ova so lambda, mozhe da se renta i si go izrental
             DateTime CurrentDate = DateTime.Now;
             var productsList = userRented.ProductsInRented.Where(p => p.Product.ProductAvailablity == false && p.Product.ProductRent == true && p.EndDate<CurrentDate).ToList();
-
             return productsList;
         }
 

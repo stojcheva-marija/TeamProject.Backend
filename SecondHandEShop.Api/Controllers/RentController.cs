@@ -24,9 +24,8 @@ namespace SecondHandEShop.Api.Controllers
         }
 
         [HttpDelete]
-        public IActionResult DeleteFromFavourites(string email, int product)
+        public IActionResult DeleteFromRented(string email, int product)
         {
-
             return Ok(_rentedService.deleteProductFromRented(email, product));
         }
     }

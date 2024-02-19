@@ -18,6 +18,7 @@ namespace Domain.DTO
         public double Rating { get; set; }
         public virtual List<ProductDTO> Products { get; set; }
         public virtual List<CommentDTO> Comments { get; set; }
+        public bool IsSubscribed { get; set; } = false;
 
     }
 }

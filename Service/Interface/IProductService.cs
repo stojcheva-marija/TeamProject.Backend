@@ -12,7 +12,7 @@ namespace Service.Interface
         List<ProductDTO> GetMyProducts();
         ProductDTO GetProduct(int id);
         ProductDTO EditProduct(ProductDTO productDTO);
-        ProductDTO CreateProduct(Product product);
+        ProductDTO CreateProduct(Product product,string rent);
         void DeleteProduct(ProductDTO productDTO);
         bool AddToShoppingCart(Product product, string email, DateTime EndDate);
         bool AddToFavourites(Product product, string email);

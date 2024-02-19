@@ -58,3 +58,13 @@ C:\Users\Depka\Source\Repos\TeamProject.Backend\Domain\obj\Debug\netcoreapp3.1\D
 C:\Users\Depka\Source\Repos\TeamProject.Backend\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
 C:\Users\Depka\Source\Repos\TeamProject.Backend\Domain\obj\Debug\netcoreapp3.1\Domain.dll
 C:\Users\Depka\Source\Repos\TeamProject.Backend\Domain\obj\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\Asus\Desktop\Timski\TeamProject.Backend\Domain\bin\Debug\netcoreapp3.1\Domain.deps.json
+C:\Users\Asus\Desktop\Timski\TeamProject.Backend\Domain\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\Asus\Desktop\Timski\TeamProject.Backend\Domain\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\Asus\Desktop\Timski\TeamProject.Backend\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\Timski\TeamProject.Backend\Domain\obj\Debug\netcoreapp3.1\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\Timski\TeamProject.Backend\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\Timski\TeamProject.Backend\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfo.cs
+C:\Users\Asus\Desktop\Timski\TeamProject.Backend\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\Timski\TeamProject.Backend\Domain\obj\Debug\netcoreapp3.1\Domain.dll
+C:\Users\Asus\Desktop\Timski\TeamProject.Backend\Domain\obj\Debug\netcoreapp3.1\Domain.pdb

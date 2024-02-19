@@ -37,12 +37,22 @@ namespace Service.Implementation
             //httpContextAccessor.HttpContext.User.Identity.Name --> The name we have inside the JWT Token
         }
 
-        public ProductDTO CreateProduct(Product product)
+        public ProductDTO CreateProduct(Product product,string rent)
         {
             _productRepository.Insert(product);
+
             product.ShopApplicationUser = _user;
+
             product.ProductAvailablity = true;
-            
+
+            /*da se sredi posle ko ke se dodaj kopche na frontend i da mozhi da si se setira dali itemot e rentable ili ne, ili samo ke se kupva ednostavno, depending on
+            dali toj sho objavuva produktot dali saka da go renta i prodava ili samo prodava(a mozhi i da naprajme samo da se renta ?)
+             */
+           /* if (!string.IsNullOrEmpty(rent))
+            {
+                product.ProductRent = Boolean.Parse(rent);
+            }*/
+
             _productRepository.Update(product);
 
             return (ProductDTO) product;
@@ -194,12 +204,6 @@ namespace Service.Implementation
 
             var userShoppingCart = user.UserShoppingCart;
             
-            if (endDate != null)
-            {
-                //znachi deka saka da go renta chim ima datum 
-                //za sega startdate ke bide now ama ke se smeni na order 
-                AddToRented(product, user.Email, endDate, DateTime.Now);
-            }
 
             if (userShoppingCart != null && product != null)
             {
@@ -260,30 +264,36 @@ namespace Service.Implementation
 
             var userRented = user.UserRented;
 
-            if (userRented != null && product != null)
+
+
+            if(user.IsSubscribed == true && userRented.ProductsInRented.Count() < 5 )
             {
-                var isAlreadyAdded = userRented.ProductsInRented.FirstOrDefault(p => p.ProductId == product.Id);
-
-                if (isAlreadyAdded == null)
+                if (userRented != null && product != null)
                 {
-                    var p = _productRepository.GetById(product.Id);
-                    var productInRented = new ProductInRented
+                    var isAlreadyAdded = userRented.ProductsInRented.FirstOrDefault(p => p.ProductId == product.Id);
+
+                    if (isAlreadyAdded == null)
                     {
-                        Rented = userRented,
-                        Product = p,
-                        RentedId = userRented.Id,
-                        ProductId = p.Id,
-                        //tuka treba start date da e date na order 
-                        StartDate = StartDate,
-                        EndDate = EndDate
+                        var p = _productRepository.GetById(product.Id);
+                        p.ProductAvailablity = false;
+                        var productInRented = new ProductInRented
+                        {
+                            Rented = userRented,
+                            Product = p,
+                            RentedId = userRented.Id,
+                            ProductId = p.Id,
+                            //tuka treba start date da e date na order 
+                            StartDate = StartDate,
+                            EndDate = EndDate,
+                           
+                        };
 
-                    };
-
-                    _productInRentedRepository.Insert(productInRented);
+                        _productInRentedRepository.Insert(productInRented);
+                    }
+                    return true;
                 }
-                return true;
-            }
 
+            }
             return false;
         }
     }

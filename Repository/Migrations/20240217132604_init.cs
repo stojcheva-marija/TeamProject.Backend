@@ -66,7 +66,8 @@ namespace Repository.Migrations
                     UserRentedId = table.Column<int>(nullable: true),
                     UserRatingCount = table.Column<int>(nullable: false),
                     UserRating = table.Column<double>(nullable: false),
-                    UserRatingTotal = table.Column<int>(nullable: false)
+                    UserRatingTotal = table.Column<int>(nullable: false),
+                    IsSubscribed = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {

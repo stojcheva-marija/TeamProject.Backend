@@ -71,9 +71,9 @@ namespace SecondHandEShop.Api.Controllers
             return Ok(_productService.GetProduct(id));
         }
         [HttpPost]
-        public IActionResult CreateProduct(Product product)
+        public IActionResult CreateProduct(Product product, string rent)
         {
-            var newProduct = _productService.CreateProduct(product);
+            var newProduct = _productService.CreateProduct(product,rent);
             return CreatedAtRoute("GetProduct", new { newProduct.Id }, newProduct);
         }
 

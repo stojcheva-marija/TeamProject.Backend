@@ -19,5 +19,6 @@ namespace Domain.Identity
         public int UserRatingCount { get; set; }
         public double UserRating { get; set; }
         public int UserRatingTotal { get; set; }
+        public bool IsSubscribed { get; set; } = false;
     }
 }
