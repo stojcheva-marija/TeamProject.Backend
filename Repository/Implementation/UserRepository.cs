@@ -111,5 +111,27 @@ namespace Repository.Implementation
             entities.Update(entity);
             context.SaveChanges();
         }
+
+        public void Subscribe(ShopApplicationUser entity)
+        {
+            if (entity == null)
+            {
+                throw new ArgumentNullException("entity");
+            }
+            entity.IsSubscribed = true;
+            entities.Update(entity);
+            context.SaveChanges();
+        }
+
+        public void Unsubscribe(ShopApplicationUser entity)
+        {
+            if (entity == null)
+            {
+                throw new ArgumentNullException("entity");
+            }
+            entity.IsSubscribed = false;
+            entities.Update(entity);
+            context.SaveChanges();
+        }
     }
 }

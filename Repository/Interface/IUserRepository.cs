@@ -14,5 +14,8 @@ namespace Repository.Interface
         void Insert(ShopApplicationUser entity);
         void Update(ShopApplicationUser entity);
         void Delete(ShopApplicationUser entity);
+        
+        void Subscribe(ShopApplicationUser entity);
+        void Unsubscribe(ShopApplicationUser entity);
     }
 }

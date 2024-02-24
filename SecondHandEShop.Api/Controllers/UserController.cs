@@ -53,6 +53,32 @@ namespace SecondHandEShop.Api.Controllers
                 return StatusCode(500, "Failed to update user profile.");
             }
         }
+        //dali samo da e get?
+        [HttpPut("subscribe")]
+        public IActionResult Subscribe( string username)
+        {
+            try
+            {
+                return Ok(_userService.Subscribe(username));
+            }
+            catch (InvalidEmailPasswordException ex)
+            {
+                return BadRequest(new { error = "Invalid neshto we gotta test this", message = ex.Message });
+            }
+        }
+
+        [HttpPut("unsubscribe")]
+        public IActionResult Unsubscribe(string username)
+        {
+            try
+            {
+                return Ok(_userService.Unsubscribe( username));
+            }
+            catch (InvalidEmailPasswordException ex)
+            {
+                return BadRequest(new { error = "Invalid neshto we gotta test this", message = ex.Message });
+            }
+        }
 
         [HttpPost]
         public IActionResult ChangePassword([FromBody] ChangePasswordDTO changePasswordDTO)

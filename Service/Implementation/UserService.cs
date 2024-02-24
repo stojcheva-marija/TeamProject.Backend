@@ -119,5 +119,27 @@ namespace Service.Implementation
 
         }
 
+        public bool Subscribe(string username)
+        {
+            var user = this._userRepository.GetByUsername(username);
+            if (user != null )
+            {
+                //process stripe payment valjda tuka??
+                this._userRepository.Subscribe(user) ;
+                return true ;
+            }
+            return false;
+        }
+
+        public bool Unsubscribe(string username)
+        {
+            var user = this._userRepository.GetByUsername(username);
+            if (user != null)
+            {
+                this._userRepository.Unsubscribe(user);
+                return true ;
+            }
+            return false;
+        }
     }
     }

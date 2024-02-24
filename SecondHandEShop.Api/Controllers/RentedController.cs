@@ -7,11 +7,11 @@ namespace SecondHandEShop.Api.Controllers
 
     [Route("[controller]")]
     [ApiController]
-    public class RentController : ControllerBase
+    public class RentedController : ControllerBase
     {
         private readonly IRentedService _rentedService;
 
-        public RentController(IRentedService rentedService)
+        public RentedController(IRentedService rentedService)
         {
             this._rentedService = rentedService;
         }

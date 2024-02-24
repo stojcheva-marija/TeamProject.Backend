@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NYeV/2uwhgaMN6+neFt0PBUcfxMTab9DyugSTbMt2J/zDHQzX2pTYN/J5eqid4x8WqB9e95Gmv342vpyWjRgDQ==",
+  "dgSpecHash": "penaLTcbr2KNQ5kY5X2tPOLBFpQnWroDmTJrbHV+ZxRdwOEzpYLjofhol7FBbgm3vFopOg80b9/00e0qx/JZyQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Asus\\Desktop\\Timski\\TeamProject.Backend\\SecondHandEShop.Api\\SecondHandEShop.Api.csproj",
   "expectedPackageFiles": [
@@ -62,6 +62,7 @@
     "C:\\Users\\Asus\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\stripe.net\\43.15.0\\stripe.net.43.15.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\system.codedom\\4.7.0\\system.codedom.4.7.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
