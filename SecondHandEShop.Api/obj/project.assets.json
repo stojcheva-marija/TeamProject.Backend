@@ -958,7 +958,7 @@
           }
         }
       },
-      "Stripe.net/43.15.0": {
+      "Stripe.net/43.16.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "12.0.3",
@@ -3654,10 +3654,10 @@
         "version.txt"
       ]
     },
-    "Stripe.net/43.15.0": {
-      "sha512": "5i4uFhhHJKEK68ewVelq/QNjnJv2CCMo84zpUp9C0Qi8gvJy19Vsg+jbXGn8882M3mhcMPxDehpOkm8wmyohaw==",
+    "Stripe.net/43.16.0": {
+      "sha512": "BDKcJkGv8AwZkf07jw/PmBzxA+CRaND2ErGwqb+qnwk0vZccO9XYBpBZydQroq8ij0gIdnRvNLR/1qmNHQv4WQ==",
       "type": "package",
-      "path": "stripe.net/43.15.0",
+      "path": "stripe.net/43.16.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3674,7 +3674,7 @@
         "lib/netcoreapp3.1/Stripe.net.xml",
         "lib/netstandard2.0/Stripe.net.dll",
         "lib/netstandard2.0/Stripe.net.xml",
-        "stripe.net.43.15.0.nupkg.sha512",
+        "stripe.net.43.16.0.nupkg.sha512",
         "stripe.net.nuspec"
       ]
     },
@@ -7154,28 +7154,24 @@
       "Microsoft.EntityFrameworkCore.Design >= 3.1.32",
       "NSwag.AspNetCore >= 13.19.0",
       "Repository >= 1.0.0",
-      "Service >= 1.0.0"
+      "Service >= 1.0.0",
+      "Stripe.net >= 43.16.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Asus\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Depka\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Timski\\TeamProject.Backend\\SecondHandEShop.Api\\SecondHandEShop.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\SecondHandEShop.Api\\SecondHandEShop.Api.csproj",
       "projectName": "SecondHandEShop.Api",
-      "projectPath": "C:\\Users\\Asus\\Desktop\\Timski\\TeamProject.Backend\\SecondHandEShop.Api\\SecondHandEShop.Api.csproj",
-      "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Asus\\Desktop\\Timski\\TeamProject.Backend\\SecondHandEShop.Api\\obj\\",
+      "projectPath": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\SecondHandEShop.Api\\SecondHandEShop.Api.csproj",
+      "packagesPath": "C:\\Users\\Depka\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\SecondHandEShop.Api\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Depka\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7183,17 +7179,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Asus\\Desktop\\Timski\\TeamProject.Backend\\Repository\\Repository.csproj": {
-              "projectPath": "C:\\Users\\Asus\\Desktop\\Timski\\TeamProject.Backend\\Repository\\Repository.csproj"
+            "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Repository\\Repository.csproj": {
+              "projectPath": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Repository\\Repository.csproj"
             },
-            "C:\\Users\\Asus\\Desktop\\Timski\\TeamProject.Backend\\Service\\Service.csproj": {
-              "projectPath": "C:\\Users\\Asus\\Desktop\\Timski\\TeamProject.Backend\\Service\\Service.csproj"
+            "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Service\\Service.csproj": {
+              "projectPath": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Service\\Service.csproj"
             }
           }
         }
@@ -7225,6 +7222,10 @@
           "NSwag.AspNetCore": {
             "target": "Package",
             "version": "[13.19.0, )"
+          },
+          "Stripe.net": {
+            "target": "Package",
+            "version": "[43.16.0, )"
           }
         },
         "imports": [
@@ -7246,7 +7247,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   },

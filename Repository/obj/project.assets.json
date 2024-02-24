@@ -6183,24 +6183,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Asus\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Depka\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Timski\\TeamProject.Backend\\Repository\\Repository.csproj",
+      "projectUniqueName": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "C:\\Users\\Asus\\Desktop\\Timski\\TeamProject.Backend\\Repository\\Repository.csproj",
-      "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Asus\\Desktop\\Timski\\TeamProject.Backend\\Repository\\obj\\",
+      "projectPath": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Repository\\Repository.csproj",
+      "packagesPath": "C:\\Users\\Depka\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Repository\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Depka\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6214,8 +6209,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Asus\\Desktop\\Timski\\TeamProject.Backend\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Asus\\Desktop\\Timski\\TeamProject.Backend\\Domain\\Domain.csproj"
+            "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Depka\\Source\\Repos\\TeamProject.Backend\\Domain\\Domain.csproj"
             }
           }
         }
@@ -6261,7 +6256,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

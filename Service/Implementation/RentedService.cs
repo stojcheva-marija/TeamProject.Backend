@@ -26,11 +26,12 @@ namespace Service.Implementation
         }
         public List<ProductInRented> getRentedInfo(string email)
         {
-            var loggInUser = _userRepository.GetByEmail(email);
+            var loggInUser = _userRepository.GetByEmail( email);
             var userRented = loggInUser.UserRented;
             //TO DO: da se naprai ova so lambda, mozhe da se renta i si go izrental
             DateTime CurrentDate = DateTime.Now;
-            var productsList = userRented.ProductsInRented.Where(p => p.Product.ProductAvailablity == false && p.Product.ProductRent == true && p.EndDate<CurrentDate).ToList();
+            //filtrive posle sea testing  .Where(p => p.Product.ProductAvailablity == false && p.Product.ProductRent == true && p.EndDate<CurrentDate)
+            var productsList = userRented.ProductsInRented.ToList();
             return productsList;
         }
 

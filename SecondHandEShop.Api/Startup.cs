@@ -16,6 +16,7 @@ using Repository.Implementation;
 using Repository.Interface;
 using Service.Implementation;
 using Service.Interface;
+using Stripe;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,7 +53,7 @@ namespace SecondHandEShop.Api
             services.AddScoped(typeof(ICommentRepository), typeof(CommentRepository));
             services.AddScoped(typeof(IProductRepository), typeof(ProductRepository));
 
-            services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<IProductService, Service.Implementation.ProductService>();
             services.AddTransient<IUserProfileService, UserProfileService>();
             services.AddTransient<IShoppingCartService, ShoppingCartService>();
             services.AddTransient<IUserService, UserService>();
@@ -100,6 +101,10 @@ namespace SecondHandEShop.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //so gospod napred 
+            StripeConfiguration.ApiKey = Configuration.GetSection("Stripe")["SecretKey"];
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

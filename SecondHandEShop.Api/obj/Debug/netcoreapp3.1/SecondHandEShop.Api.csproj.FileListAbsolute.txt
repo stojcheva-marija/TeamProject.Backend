@@ -673,3 +673,4 @@ C:\Users\Asus\Desktop\Timski\TeamProject.Backend\SecondHandEShop.Api\obj\Debug\n
 C:\Users\Asus\Desktop\Timski\TeamProject.Backend\SecondHandEShop.Api\obj\Debug\netcoreapp3.1\SecondHandEShop.Api.dll
 C:\Users\Asus\Desktop\Timski\TeamProject.Backend\SecondHandEShop.Api\obj\Debug\netcoreapp3.1\SecondHandEShop.Api.pdb
 C:\Users\Asus\Desktop\Timski\TeamProject.Backend\SecondHandEShop.Api\obj\Debug\netcoreapp3.1\SecondHandEShop.Api.genruntimeconfig.cache
+C:\Users\Depka\Source\Repos\TeamProject.Backend\SecondHandEShop.Api\bin\Debug\netcoreapp3.1\Stripe.net.dll
